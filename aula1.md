@@ -14,4 +14,4 @@ nano = escolhe o arquivo e o edita "como se fosse um bloco de notas".
 git branch -M main = troca a branch para a main
 git add= adiciona item para dar commit.
 git commit = faz o comit.
-git push -u main = faz o push da main pro git.
+git push origin main = faz o push da main pro git.

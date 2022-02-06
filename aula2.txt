@@ -1,0 +1,47 @@
+ls -l primeiros 10 caracteres 
+o primeiro caractere indica o tipo de arquivo (- = arq comum) (d = diretorio) (l= link simbolico) (b = dispositivo de bloco) (c= dispositivo de caractere) (s = socket)
+os 9 caracteres posteriores
+os proximos 3 temos as permissoes do dono do arquivo (rw- = dono) (r-- = grupo dono) (r-- = outros)
+os caracteres funcionam da seguinte forma
+os primeiros 10- tipo de arquivo
+proximos 3-dono do arquivo
+proximos 3-grupo dono do arquivo
+3 ultimos-outros
+
+r=read
+w=write
+x=execute
+
+r = 4
+w = 2
+x = 1
+- = 0
+
+para indicar o dono do arquivo = u
+para indicar o grupo dono do arquivo = g
+para indicar o outros = O
+
+mudar todas as perm de uma vez = all
+
+chmod pra mudar as permissoes de todos menos o dono
+chown pra mudar o dono
+chown diogo : users (nome do arquivo)
+      dono    grupo dono
+chgrp so modifica o grupo dono
+chgrp = chgrp nome do grupo (arquivo)
+
+para modificar somente o grupo use :
+ 
+para alterar no modo numeros, é so somar os numeros listado acima.
+
+
+
+suid = 4
+sgid = 2
+stick bit = 1   representado por t
+
+
+setfacl -m user:(nome da pessoa):rwx (nome do arquivo)     mesmo nao sendo dono do arquivo ou do grupo dono do arquivo, este usuario conseguirá acessar o arquivo.
+setfacl -m group:(nome do grupo):rwx (nome do arquivo)     mesma coisa do de cima só que para grupos
+
+getfacl (nome do arquivo)  esse carinha aqui, pega todos que podem acessar o arquivo.
